@@ -3,6 +3,7 @@ import 'package:tictactoe/responsive/responsive.dart';
 import 'package:tictactoe/widgets/custom_button.dart';
 
 class MainMenuScreen extends StatelessWidget {
+  static String routeName = '/main-menu';
   const MainMenuScreen({super.key});
 
   @override
