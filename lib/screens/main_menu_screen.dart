@@ -25,7 +25,7 @@ class MainMenuScreen extends StatelessWidget {
           children: [
             CustomButton(onTap: () => createRoom(context), text: 'Create Room'),
             SizedBox(height: 20),
-            CustomButton(onTap: () => createRoom(context), text: 'Join Room')
+            CustomButton(onTap: () => JoinRoom(context), text: 'Join Room')
         
           ],
         ),
