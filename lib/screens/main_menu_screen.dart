@@ -24,7 +24,7 @@ class MainMenuScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomButton(onTap: () => createRoom(context), text: 'Create Room'),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             CustomButton(onTap: () => JoinRoom(context), text: 'Join Room')
         
           ],

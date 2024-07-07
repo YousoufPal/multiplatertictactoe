@@ -6,7 +6,7 @@ import 'package:tictactoe/widgets/custom_textfield.dart';
 
 class JoinRoomScreen extends StatefulWidget {
   static String routeName = '/join-room';
-  const JoinRoomScreen({Key? key}) : super(key: key);
+  const JoinRoomScreen({super.key});
 
   @override
   _JoinRoomScreenState createState() => _JoinRoomScreenState();

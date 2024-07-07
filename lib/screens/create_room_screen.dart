@@ -7,7 +7,7 @@ import 'package:tictactoe/widgets/custom_textfield.dart';
 class CreateRoomScreen extends StatefulWidget {
 
   static String routeName = '/create-room';
-  const CreateRoomScreen({Key? key}) : super(key: key); 
+  const CreateRoomScreen({super.key}); 
   
   @override
   _CreateRoomScreenState createState() => _CreateRoomScreenState();

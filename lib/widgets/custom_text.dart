@@ -5,10 +5,10 @@ class CustomText extends StatelessWidget {
   final String text;
   final double textSize;
   const CustomText({
-    Key? key, 
+    super.key, 
     required this.shadows,
     required this.text,
-    required this.textSize,}) : super(key: key);
+    required this.textSize,});
 
   @override
   Widget build(BuildContext context) {
