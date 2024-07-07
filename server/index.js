@@ -6,6 +6,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 var server = http.createServer(app);
 
+const Room = require('./models/room');
+
 var io = require('socket.io')(server);
 
 const Database = "mongodb+srv://yousoufpal7:bobdream@cluster0.2jsqimc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
@@ -14,6 +16,14 @@ io.on("connection", (socket) => {
     console.log("Socket connected: " + socket.id)
     socket.on('createRoom', async ({name}) => {
         console.log(name);
+        console.log(socket.id);
+
+        let room = new Room();
+        let player = {
+            SocketID: socket.id,
+            name: name,
+            playerType: "X",
+        }; 
     });
 }); 
 
