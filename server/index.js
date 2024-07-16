@@ -18,12 +18,26 @@ io.on("connection", (socket) => {
         console.log(name);
         console.log(socket.id);
 
-        let room = new Room();
-        let player = {
-            SocketID: socket.id,
-            name: name,
-            playerType: "X",
-        }; 
+        try{
+            let room = new Room();
+            let player = {
+                SocketID: socket.id,
+                name: name,
+                playerShape: "X",
+            }; 
+
+            room.players.push(player);
+            room.turn = player;
+            room = await room.save();
+
+            console.log(room);
+            const roomId = room._id.toString();
+            socket.join(roomId);
+            io.to(roomId).emit("createRoomSuccess", roomId); 
+
+        } catch (err) {
+            console.log(err);
+        }
     });
 }); 
 
